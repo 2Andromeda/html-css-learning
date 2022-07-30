@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch 12</title>
+    <style>
+        #container> ul{
+            border: 1px dotted blue;
+        }
+        #container li + li {
+            margin-top: 20px;
+        }
+        li + p {
+            margin-top: 50px;
+        }
+        li ~ p{
+            color:red;
+            text-decoration: underline;
+        }
+        p + ul{
+            color: blue;
+        }
+        a[href]{
+            background: yellow;
+        }
+        a[href="https://www.naver.com"]{
+            color: red;
+        }
+        [class="id2"]{
+            font-size: 30px;
+        }
+        [class~="id2"]{
+            text-decoration: underline;
+        }
+        input{
+            font-size: 20px;
+        }
+        input:focus{
+            font-size: 40px;
+        }
+        .navi a:link, .navi a:visited{
+            font-size: 20px;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .navi a:hover, .navi a:focus{
+            background-color: #222;
+            color: #fff;
+        }
+        .navi a:active{
+            background-color: #f00;
+        }
+        input:disabled{
+            background: #ddd;
+            border: 1px #ccc solid;
+        }
+        input:checked + span{
+            color: blue;
+        }
+        table tr:nth-child(2n+1){
+            background: lightgray;
+            color: black;
+        }
+        table tr:first-child, table tr:last-child{
+            font-weight: bold;
+        }
+        #intro:target{
+            border: 5px #000 solid;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <header><h1>예약 방법 및 요금</h1></header>
+        <p> 요안도라에 예약하려면?</p>
+        <ul>
+            <li> 예약 방법
+                <ul>
+                    <li>직접 통화</li>
+                    <li>문자 남기기</li>
+                </ul>
+            </li>
+            <li>요금
+                <ul>
+                    <p> 앞 형제(적용 안됨)</p>
+                    <li>1인: 40,000원</li>
+                    <li>2인: 60,000원</li>
+                    <li>3인: 80,000원</li>
+                    <p>테스트 1</p>
+                    <p>테스트 2</p>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li> 예비</li>
+        </ul>
+    </section>    
+    <ul id="intro">속성 선택자 테스트
+        <li><a>메인 메뉴:</a></li>
+        <li><a href="#linkt">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="https://www.naver.com" target="_blank">메뉴3</a></li>
+    </ul>
+    <ul class="navi">
+        <li><a href="#">메뉴4</a></li>
+    </ul>
+    <input type="text" id="name">
+    <p class="id1 id2">[속성~=값]선택자</p><br>
+    <p class="id2">[속성=값]선택자</p>
+    <form>
+        <fieldset>
+            <legend>사용자 정보</legend>
+            <label>이름<input type="text" disabled></label>
+        </fieldset>
+        <fieldset>
+            <legend>신청 과목</legend>
+            <p>이 달에 신청할 과목을 선택하세요</p>
+            <label><input type="radio" name="subject" value="speaking"><span>회화</span></label>
+            <label><input type="radio" name="subject" value="grammer"><span>문법</span></label>
+            <label><input type="radio" name="subject" value="writing"><span>작문</span></label>
+        </fieldset>
+    </form>
+    <h1>건강에 좋은 건강 식품</h1>
+    <table id="linkt">
+        <tr><td>블루베리</td></tr>
+        <tr><td>귀리</td></tr>
+        <tr><td>토마토</td></tr>
+        <tr><td>시금치</td></tr>
+    </table>
+</body>
+</html>
