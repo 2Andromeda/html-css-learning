@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: flex;
+            /*flex-direction: column;*/
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #container div{
+            width: 500px;
+            height: 200px;
+            border: 2px solid black;
+            background: #ccc;
+        }
+        #box1{
+            order:2;
+        }
+        #box2{
+            order:3;
+        }
+        #box3{
+            order:1;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="box1">1</div>
+        <div id="box2">2</div>
+        <div id="box3">3</div>
+    </div>
+</body>
+</html>
